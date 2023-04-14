@@ -1,6 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { TweetsService } from '../../modules/tweets/tweets.service';
 
+@ApiTags('tweets')
 @Controller('tweets')
 export class TweetsController {
     constructor(private readonly tweetsService: TweetsService) { }
